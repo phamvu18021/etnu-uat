@@ -10,6 +10,7 @@ import { TrackingSession } from "@/components/TrackingSession";
 interface ILayout {
   children: ReactNode;
 }
+
 const Layout = ({ children }: ILayout) => {
   return (
     <>
