@@ -33,9 +33,9 @@ export const dataDefaultTuyenSinh = {
       desc: "Tiết kiệm tối đa chi phí đi lại và sinh hoạt so với học tập tập trung."
     }
   },
-  section_form: {
-    title_form: "ĐĂNG KÝ NGAY ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ.",
-    sub_form: "Đăng ký trước thời gian kết thúc hoặc số lượng học viên đạt giới hạn."
+  form: {
+    title: "ĐĂNG KÝ NGAY ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ.",
+    desc: "Đăng ký trước thời gian kết thúc hoặc số lượng học viên đạt giới hạn."
   },
   tabs: [
     {

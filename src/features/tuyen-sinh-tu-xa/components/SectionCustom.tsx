@@ -52,7 +52,7 @@ export const SectionCustom = ({ data, accordionData }: { data: any, accordionDat
                     textShadow="4xl"
                     wordBreak="break-word"
                   >
-                    {data?.title_form || "ĐĂNG KÝ NGAY ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ."}
+                    {data?.title || "ĐĂNG KÝ NGAY ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ."}
                   </Text>
                 </Box>
                 <Text
@@ -64,7 +64,7 @@ export const SectionCustom = ({ data, accordionData }: { data: any, accordionDat
                   textShadow="xl"
                   px={2}
                 >
-                  {data?.sub_form || "Đăng ký trước thời gian kết thúc hoặc số lượng học viên đạt giới hạn."}
+                  {data?.desc || "Đăng ký trước thời gian kết thúc hoặc số lượng học viên đạt giới hạn."}
                 </Text>
               </Box>
 
