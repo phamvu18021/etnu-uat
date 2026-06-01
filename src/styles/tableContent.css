@@ -1,0 +1,66 @@
+/* #toc_container {
+    border: 1px solid black;
+    border-radius: 16px;
+    width: max-content;
+    max-width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+  }
+  
+  #toc_container li {
+    list-style: none;
+  }
+  
+  #toc_container li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  #toc_container .toc_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+   */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#toc_container {
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 24px;
+}
+.toc_title {
+  display: none;
+}
+.toc_list li {
+  display: none;
+}
+
+/* Show the li elements when the .show class is applied to the ul */
+.toc_list.show li {
+  display: block;
+  margin-left: 15px;
+}
+
+.toc_list.show li a {
+  text-decoration: none;
+}
+
+/* Optional styling for the toggle button */
+.toc-toggle-btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.toc-toggle-btn:hover {
+  border: 1px solid rgb(209, 209, 209);
+}

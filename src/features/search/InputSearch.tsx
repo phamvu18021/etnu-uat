@@ -1,0 +1,69 @@
+"use client";
+
+import { toSlug } from "@/ultil/toSlug";
+import { Box, Button, HStack, Input, Text } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
+export const InputSearch = ({ type }: { type: string }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+  const [checkInput, setCheckInput] = useState(false);
+
+  const onSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const str = toSlug({ input: searchQuery });
+    if (str != "") {
+      router.push(`/tim-kiem?keyword=${str}&page=1`);
+    }
+    setSearchQuery("");
+  };
+
+  useEffect(() => {
+    const str = toSlug({ input: searchQuery });
+    if (searchQuery != "" && str == "") {
+      setCheckInput(true);
+    } else {
+      setCheckInput(false);
+    }
+  }, [searchQuery]);
+  return (
+    <Box zIndex={"100"}>
+      <form onSubmit={onSearch}>
+        <HStack>
+          <Input
+            required
+            bg={"white"}
+            value={searchQuery}
+            type={type || "Text"}
+            border={"1px solid #BFBFBF "}
+            borderRadius={0}
+            px={4}
+            placeholder="Tìm kiếm..."
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <Button
+            color={"#ffffff"}
+            size={"2xl"}
+            p={"9px 9px"}
+            bg={"#008AFA"}
+            transition={"ease-in-out .4s"}
+            _hover={{
+              background: "white",
+              color: "#008AFA",
+              transition: "0.4s ease-in-out"
+            }}
+            onClick={onSearch}
+          >
+            Tìm kiếm
+          </Button>
+        </HStack>
+      </form>
+      {checkInput && (
+        <Box pt={2} display={"flex"} color={"white"} justifyContent={"center"}>
+          <Text>Từ khóa tìm kiếm không hợp lệ</Text>
+        </Box>
+      )}
+    </Box>
+  );
+};
