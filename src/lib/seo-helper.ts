@@ -13,7 +13,7 @@ export async function getGlobalMetadata(
   const url = slug ? `${baseUrl}/${slug}/` : baseUrl;
 
   try {
-    const res = await fetchSeo({ url, revalidate: 300 });
+    const res = await fetchSeo({ url, revalidate: 10 });
     if (!res.ok) {
       console.warn(`SEO fetch failed for slug "${slug}": ${res.statusText}`);
       return fallback;
@@ -44,7 +44,7 @@ export async function getGlobalMetadata(
           undefined) as string | undefined,
         images:
           Array.isArray(parsed.openGraph?.images) &&
-            (parsed.openGraph?.images as any[]).length > 0
+          (parsed.openGraph?.images as any[]).length > 0
             ? parsed.openGraph!.images
             : fallback.openGraph?.images || []
       },
