@@ -51,7 +51,7 @@ export const Benefit = ({ benefit }: { benefit: any }) => {
         <Text as="span" color="red.600" mr={2}>★</Text>
         {benefit?.title || "TẠI SAO NÊN LỰA CHỌN CHƯƠNG TRÌNH NÀY."}
       </Heading>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+      <SimpleGrid columns={{ base: 1, md: 3 }}>
         {certificates.map((item, index) => (
           <CertificateCard
             key={index}

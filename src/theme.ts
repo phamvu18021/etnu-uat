@@ -2,8 +2,8 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Geologica', sans-serif;`,
-    body: `'Geologica', sans-serif;`
+    heading: `var(--font-montserrat), sans-serif`,
+    body: `var(--font-montserrat), sans-serif`
   }
 });
 
