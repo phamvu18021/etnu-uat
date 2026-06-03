@@ -6,18 +6,23 @@ export const CertificateBanner = ({
 }: {
   CertificateBanner: any;
 }) => {
+  const imgSrc = typeof CertificateBanner === 'string'
+    ? CertificateBanner
+    : (CertificateBanner?.banner_image || CertificateBanner?.banner || "/anh-bia-facebook.webp");
+
   return (
     <Box
       position="relative"
       w="100%"
-      h={{ base: "300px", md: "500px", xl: "760px" }}
       overflow="hidden"
     >
       <Image
-        src={CertificateBanner?.banner_image || "/anh-bia-facebook.webp"}
+        src={imgSrc}
         alt="Banner"
-        fill
-        style={{ objectFit: "cover", objectPosition: "center" }}
+        width={1920}
+        height={825}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto", display: "block" }}
         priority
       />
     </Box>

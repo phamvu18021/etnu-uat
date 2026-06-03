@@ -46,9 +46,9 @@ export const Benefit = ({ benefit }: { benefit: any }) => {
   ];
 
   return (
-    <Container maxW="7xl" py={16}>
-      <Heading as="h2" size="xl" mb={8} display="flex" alignItems="center">
-        <Text as="span" color="red.600" mr={2}>★</Text>
+    <Container maxW="7xl" py={{ base: 8, md: 16 }}>
+      <Heading as="h2" size={{ base: "lg", md: "xl" }} mb={8} display="flex" alignItems={{ base: "start", md: "center" }}>
+        <Text as="span" color="red.600" mr={2} >★</Text>
         {benefit?.title || "TẠI SAO NÊN LỰA CHỌN CHƯƠNG TRÌNH NÀY."}
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }}>
