@@ -33,7 +33,7 @@ export const CertificateText = ({
           h3: { fontSize: "xl", fontWeight: "bold", mt: 4, mb: 3 },
           ul: { pl: 6, mb: 4 },
           li: { mb: 2 },
-          img: { maxW: "100%", height: "auto", display: "block", mx: "auto" },
+          img: { maxW: "100%", height: "auto", display: "block" },
           figure: { maxW: "100%", height: "auto", m: 0 },
           iframe: { maxW: "100%" }
         }}
